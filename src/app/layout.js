@@ -18,7 +18,7 @@ export const metadata = {
   title: "One PGK Swimming Club",
   description: "One PGK Swimming Club",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
   },
 };
 
