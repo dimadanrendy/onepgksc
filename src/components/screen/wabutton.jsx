@@ -1,4 +1,7 @@
 "use client";
+import { Whatsapp, gmail, instagram, tiktok, youtube } from "@/lib/image";
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const WhatsAppButton = () => {
@@ -12,7 +15,7 @@ const WhatsAppButton = () => {
         <>
             {/* Tombol WhatsApp */}
             <div
-                className={`fixed left-0 top-1/2 transform -translate-y-1/2 bg-[#429ad2] text-white h-32 rounded-r-sm w-5 shadow-xl cursor-pointer z-50 flex items-center justify-center transition-transform duration-300 ${isOpen ? "translate-x-60" : ""}`}
+                className={`fixed left-0 top-1/2 transform -translate-y-1/2 bg-[#429ad2] text-white h-32 rounded-r-sm w-5 shadow-xl cursor-pointer z-50 flex items-center justify-end transition-transform duration-300 ${isOpen ? "translate-x-48" : ""}`}
                 onClick={toggleSlide}
 
             >
@@ -32,35 +35,38 @@ const WhatsAppButton = () => {
 
             {/* Slide WhatsApp */}
             <div
-                className={`fixed left-0 top-1/2 rounded-r-xl -translate-y-1/2 w-60 h-44 transform transition-transform duration-300 bg-white ${isOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed left-0 top-1/2 rounded-r-xl -translate-y-1/2 w-48 h-[400px] transform transition-transform duration-300 bg-white ${isOpen ? "translate-x-0" : "-translate-x-full"
                     } z-40`}
             >
-                <div className="p-4 text-center">
-                    <a
-                        href="https://wa.me/1234567890"
-                        target="_blank"
-                        className="bg-green-500 text-white py-2 px-4 rounded-md"
-                    >
-                        WhatsApp
-                    </a>
+                <div className="p-4 flex justify-end items-center gap-2 mr-4">
+                    <p>Whatsapp</p>
+                    <Link href="https://wa.me/1234567890" target="_blank">
+                        <Image src={Whatsapp} alt="WhatsApp" width={50} height={50} quality={100} />
+                    </Link>
                 </div>
-                <div className="p-4 text-center">
-                    <a
-                        href="https://wa.me/1234567890"
-                        target="_blank"
-                        className="bg-green-500 text-white py-2 px-4 rounded-md"
-                    >
-                        Instagram
-                    </a>
+                <div className="p-4 flex justify-end items-center gap-2 mr-4">
+                    <p>Instagram</p>
+                    <Link href="https://wa.me/1234567890" target="_blank">
+                        <Image src={instagram} alt="Instagram" width={50} height={50} quality={100} />
+                    </Link>
                 </div>
-                <div className="p-4 text-center">
-                    <a
-                        href="https://wa.me/1234567890"
-                        target="_blank"
-                        className="bg-green-500 text-white py-2 px-4 rounded-md"
-                    >
-                        YouTube
-                    </a>
+                <div className="p-4 flex justify-end items-center gap-2 mr-4">
+                    <p>Youtube</p>
+                    <Link href="https://wa.me/1234567890" target="_blank">
+                        <Image src={youtube} alt="youtube" width={50} height={50} quality={100} />
+                    </Link>
+                </div>
+                <div className="p-4 flex justify-end items-center gap-2 mr-5">
+                    <p>Gmail</p>
+                    <Link href="https://wa.me/1234567890" target="_blank">
+                        <Image src={gmail} alt="gmail" width={45} height={45} quality={100} />
+                    </Link>
+                </div>
+                <div className="p-4 flex justify-end items-center gap-2 mr-4">
+                    <p>Tiktok</p>
+                    <Link href="https://wa.me/1234567890" target="_blank">
+                        <Image src={tiktok} alt="tiktok" width={50} height={50} quality={100} />
+                    </Link>
                 </div>
             </div>
         </>

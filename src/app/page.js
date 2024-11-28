@@ -162,8 +162,8 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">
-                    Leverage artificial intelligence to streamline processes and
-                    achieve better outcomes.
+                    Leverage artificial intelligFence to streamline processes
+                    and achieve better outcomes.
                   </p>
                 </CardContent>
               </Card>
